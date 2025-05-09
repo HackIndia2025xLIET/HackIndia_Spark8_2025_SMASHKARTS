@@ -26,7 +26,7 @@ documents = load_pdf(file_path)
 def create_chunks(documents): 
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size = 1000,
-        chunk_overlap = 200,
+        chunk_overlap = 500,
         add_start_index = True
     )
     text_chunks = text_splitter.split_documents(documents)
@@ -37,7 +37,7 @@ text_chunks = create_chunks(documents)
 
 
 #Step 3: Setup Embeddings Model (Use DeepSeek R1 with Ollama)
-ollama_model_name="deepseek-r1:1.5b"
+ollama_model_name="deepseek-r1:7b"
 def get_embedding_model(ollama_model_name):
     embeddings = OllamaEmbeddings(model=ollama_model_name)
     return embeddings

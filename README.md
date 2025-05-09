@@ -1,64 +1,123 @@
-# ⚖️ JurisRAG – AI-Powered Legal Assistant
+# Project README
 
-Welcome to **JurisRAG**, an AI-based legal assistant that reads, understands, and answers questions from legal documents with high accuracy using cutting-edge machine learning and NLP techniques.
-
-> 🚧 **Note:** This project is currently **under development** – contributions, feedback, and collaboration are welcome!
+This is a Python project with three Python files representing different phases of the project. Below are the instructions for setting up the environment and running the project.
 
 ---
 
-## 🧠 What is JurisRAG?
-
-**JurisRAG** leverages a **Retrieval-Augmented Generation (RAG)** pipeline powered by **Ollama’s DeepSeek-R1** open-source language model to deliver **context-aware answers** grounded in uploaded legal documents. Whether you're a legal professional, student, or researcher, JurisRAG helps extract meaningful insights from complex legal texts – quickly and accurately.
-
-✅ The RAG pipeline has been **successfully set up and integrated** into the system.
-
----
-
-## 🎯 Hackathon Project
-
-This project is being built for the **HackIndia2025 – LIET Regional Round**, and we’re proud of what we’ve created so far. JurisRAG represents our vision of making legal research smarter, faster, and more accessible using AI.
+## Table of Contents
+1. [Environment Setup](#environment-setup)
+    - [Using Pipenv](#using-pipenv)
+    - [Using Conda](#using-conda)
+    - [Using Pip](#using-pip)
+2. [Running the Project](#running-the-project)
 
 ---
 
-## ⚙️ Tech Stack
+## Environment Setup
 
-Here's what powers JurisRAG under the hood:
+### Using Pipenv
+Pipenv is a tool that manages dependencies and virtual environments for Python projects.
 
-- 🐍 **Python** – Backend logic and orchestration  
-- 📄 **pdfplumber** – For extracting text from legal PDF documents  
-- 🧠 **Ollama + DeepSeek-R1** – Local LLM for natural language generation  
-- 📦 **FAISS** – Vector database for efficient semantic search  
-- 🔐 **Firebase Auth** – Google sign-in integration for user authentication  
-- 👤 **Manual Login / Signup** – Alternative auth option for non-Google users  
+1. Install Pipenv if you don't have it:
+    ```
+    pip install pipenv
+    ```
 
----
+2. Navigate to the project directory and create a virtual environment:
+    ```
+    pipenv install
+    ```
 
-## 🔑 Features
+3. Activate the virtual environment:
+    ```
+    pipenv shell
+    ```
 
-- ✅ Upload and process legal documents  
-- 🔍 Ask context-specific questions  
-- 🤖 Get intelligent, relevant responses from within your documents  
-- 🔒 Secure user authentication with Google or manual credentials  
-- 🧠 Locally run RAG pipeline for privacy-friendly operations  
-
----
-
-## 📌 Project Status
-
-The project is **actively being built** – expect frequent updates, UI/UX improvements, and more AI-powered features. Follow or star 🌟 the repo to stay in the loop!
+4. (Optional) Install any additional dependencies:
+    ```
+    pipenv install <package_name>
+    ```
 
 ---
 
-## 📜 License
+### Using Conda
+Conda is an open-source package management system and environment management system.
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+1. Create a new conda environment:
+    ```
+    conda create -n myenv python=3.9
+    ```
+
+2. Activate the environment:
+    ```
+    conda activate myenv
+    ```
+
+3. Install dependencies from `requirements.txt` (if available):
+    ```
+    pip install -r requirements.txt
+    ```
 
 ---
 
-## 🔗 Repository
+### Using Pip
+Pip is the standard package installer for Python.
 
-[🔗 GitHub Repo – HackIndia2025xLIET/JurisRag](https://github.com/HackIndia2025xLIET/JurisRag)
+1. Install virtualenv if you don't have it:
+    ```
+    pip install virtualenv
+    ```
+
+2. Create a virtual environment:
+    ```
+    virtualenv venv
+    ```
+
+3. Activate the virtual environment:
+    - On Windows:
+        ```
+        venv\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```
+        source venv/bin/activate
+        ```
+
+4. Install dependencies from `requirements.txt` (if available):
+    ```
+    pip install -r requirements.txt
+    ```
 
 ---
 
-Thank you for checking out JurisRAG – we're excited to see where this journey takes us! 💼🤖
+## Running the Project
+
+The project consists of three Python files, each corresponding to a different phase of the project:
+
+### To run the App directly
+```
+streamlit run main.py
+```
+
+### To run app in different phases
+
+1. Phase 1: Run the first phase using:
+    ```
+    streamlit run frontend.py
+    ```
+
+2. Phase 2: Run the second phase using:
+    ```
+    python vector_database.py
+    ```
+
+3. Phase 3: Run the third phase using:
+    ```
+    python rag_pipeline.py
+    ```
+
+Ensure that all dependencies are installed before running the scripts.
+
+---
+
+If you encounter any issues, feel free to reach out or check the documentation for the tools mentioned above.

@@ -1,48 +1,15 @@
-from langchain_community.document_loaders import PDFPlumberLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_ollama import OllamaEmbeddings
+# File: vector_database.py
+
 from langchain_community.vectorstores import FAISS
+from langchain_ollama import OllamaEmbeddings
 
-#Step 1: Upload & Load raw PDF(s)
+# You can modify the model name or embedding settings here
+embedding_model_name = "deepseek-r1:7b"
+embeddings = OllamaEmbeddings(model=embedding_model_name)
 
-pdfs_directory = 'pdfs/'
-
-def upload_pdf(file):
-    with open(pdfs_directory + file.name, "wb") as f:
-        f.write(file.getbuffer())
-
-
-def load_pdf(file_path):
-    loader = PDFPlumberLoader(file_path)
-    documents = loader.load()
-    return documents
-
-
-file_path = 'universal_declaration_of_human_rights.pdf'
-documents = load_pdf(file_path)
-#print("PDF pages: ",len(documents))
-
-#Step 2: Create Chunks
-def create_chunks(documents): 
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size = 1000,
-        chunk_overlap = 500,
-        add_start_index = True
-    )
-    text_chunks = text_splitter.split_documents(documents)
-    return text_chunks
-
-text_chunks = create_chunks(documents)
-#print("Chunks count: ", len(text_chunks))
-
-
-#Step 3: Setup Embeddings Model (Use DeepSeek R1 with Ollama)
-ollama_model_name="deepseek-r1:7b"
-def get_embedding_model(ollama_model_name):
-    embeddings = OllamaEmbeddings(model=ollama_model_name)
-    return embeddings
-
-#Step 4: Index Documents **Store embeddings in FAISS (vector store)
-FAISS_DB_PATH="vectorstore/db_faiss"
-faiss_db=FAISS.from_documents(text_chunks, get_embedding_model(ollama_model_name))
-faiss_db.save_local(FAISS_DB_PATH)
+# Load the vector DB (must have been created previously via main.py)
+faiss_db = FAISS.load_local(
+    folder_path="vectorstore/db_faiss",
+    embeddings=embeddings,
+    allow_dangerous_deserialization=True
+)

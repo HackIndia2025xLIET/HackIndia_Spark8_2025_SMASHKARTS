@@ -8,7 +8,15 @@ Welcome to **JurisRAG**, an AI-based legal assistant that reads, understands, an
 
 ## 🧠 What is JurisRAG?
 
-**JurisRAG** uses a **Retrieval-Augmented Generation (RAG)** pipeline paired with **Ollama’s DeepSeek-R1** open-source language model to provide **context-aware answers** grounded in uploaded legal documents. It's designed for legal professionals, students, and researchers to get quick insights from complex documents.
+**JurisRAG** leverages a **Retrieval-Augmented Generation (RAG)** pipeline powered by **Ollama’s DeepSeek-R1** open-source language model to deliver **context-aware answers** grounded in uploaded legal documents. Whether you're a legal professional, student, or researcher, JurisRAG helps extract meaningful insights from complex legal texts – quickly and accurately.
+
+✅ The RAG pipeline has been **successfully set up and integrated** into the system.
+
+---
+
+## 🎯 Hackathon Project
+
+This project is being built for the **HackIndia2025 – LIET Regional Round**, and we’re proud of what we’ve created so far. JurisRAG represents our vision of making legal research smarter, faster, and more accessible using AI.
 
 ---
 
@@ -16,22 +24,28 @@ Welcome to **JurisRAG**, an AI-based legal assistant that reads, understands, an
 
 Here's what powers JurisRAG under the hood:
 
-- 🐍 **Python** – Backend logic and orchestration
-- 📄 **pdfplumber** – For extracting text from legal PDF documents
-- 🧠 **Ollama + DeepSeek-R1** – Local LLM for natural language generation
-- 📦 **FAISS** – Vector database for efficient semantic search
-- 🔐 **Firebase Auth** – Google sign-in integration for user authentication
-- 👤 **Manual Login / Signup** – Alternative auth option for non-Google users
+- 🐍 **Python** – Backend logic and orchestration  
+- 📄 **pdfplumber** – For extracting text from legal PDF documents  
+- 🧠 **Ollama + DeepSeek-R1** – Local LLM for natural language generation  
+- 📦 **FAISS** – Vector database for efficient semantic search  
+- 🔐 **Firebase Auth** – Google sign-in integration for user authentication  
+- 👤 **Manual Login / Signup** – Alternative auth option for non-Google users  
 
 ---
 
 ## 🔑 Features
 
-- ✅ Upload and process legal documents
-- 🔍 Ask context-specific questions
-- 🤖 Get intelligent, relevant responses from within your documents
-- 🔒 Secure user authentication with Google or manual credentials
-- 🧠 Locally run RAG pipeline for privacy-friendly operations
+- ✅ Upload and process legal documents  
+- 🔍 Ask context-specific questions  
+- 🤖 Get intelligent, relevant responses from within your documents  
+- 🔒 Secure user authentication with Google or manual credentials  
+- 🧠 Locally run RAG pipeline for privacy-friendly operations  
+
+---
+
+## 📌 Project Status
+
+The project is **actively being built** – expect frequent updates, UI/UX improvements, and more AI-powered features. Follow or star 🌟 the repo to stay in the loop!
 
 ---
 
@@ -41,22 +55,10 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-## 📌 Project Status
-
-The project is **actively being built** – expect frequent updates, UI/UX improvements, and more AI features. Follow or star 🌟 the repo to stay updated!
-
----
-
 ## 🔗 Repository
 
 [🔗 GitHub Repo – HackIndia2025xLIET/JurisRag](https://github.com/HackIndia2025xLIET/JurisRag)
 
 ---
 
-## 🙌 Contributions
-
-We welcome contributions! Feel free to fork the repo, submit issues, or create pull requests.
-
----
-
-Thank you for checking out JurisRAG! 💼🤖
+Thank you for checking out JurisRAG – we're excited to see where this journey takes us! 💼🤖

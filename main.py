@@ -11,14 +11,14 @@ from langchain_groq import ChatGroq
 
 # Firebase Configuration
 firebaseConfig = {
-  "apiKey": "AIzaSyBHjPkKWCaO-W6Mw6gASb0b8eg1evvzdXw",
-  "authDomain": "jurisrag.firebaseapp.com",
-  "databaseURL": "https://jurisrag-default-rtdb.asia-southeast1.firebasedatabase.app",
+  "apiKey": "",
+  "authDomain": "",
+  "databaseURL": "",
   "projectId": "jurisrag",
-  "storageBucket": "jurisrag.firebasestorage.app",
-  "messagingSenderId": "803233703815",
-  "appId": "1:803233703815:web:229221682448b863d91522",
-  "measurementId": "G-G8HGLSQJXZ"
+  "storageBucket": "",
+  "messagingSenderId": "",
+  "appId": "",
+  "measurementId": ""
 }
 
 firebase = pyrebase.initialize_app(firebaseConfig)

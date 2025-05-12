@@ -5,7 +5,7 @@ from vector_database import faiss_db
 from langchain_core.prompts import ChatPromptTemplate
 
 # Initialize LLM
-llm_model = ChatGroq(model="deepseek-r1-distill-llama-70b", api_key="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")
+llm_model = ChatGroq(model="deepseek-r1-distill-llama-70b", api_key="your_api_key")
 
 # Prompt Template
 custom_prompt_template = """
